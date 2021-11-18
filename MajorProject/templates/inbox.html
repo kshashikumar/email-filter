@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block inbox %}
+<style>
+    .card {
+        padding: 2%;
+    }
+</style>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2">
+            <div class="card home-card nav flex-column" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <button class="nav-link inbox-button" id="v-pills-inbox-tab" data-bs-toggle="pill" data-bs-target="#v-pills-inbox"
+                    role="tab" aria-controls="v-pills-inbox" aria-selected="true">Inbox</button>
+                <button class="nav-link inbox-button" id="v-pills-spam-tab" data-bs-toggle="pill" data-bs-target="#v-pills-spam"
+                    role="tab" aria-controls="v-pills-spam" aria-selected="false">Spam</button>
+            </div>
+        </div>
+        <div class="col-10">
+            <div class="card home-card tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-inbox" role="tabpanel"
+                    aria-labelledby="v-pills-inbox-tab">
+                    <h4>Ham Mails</h4>
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        {%for i in range(0, len_ham) %}
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-heading{{i}}">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapse{{i}}" aria-expanded="false"
+                                    aria-controls="flush-collapse{{i}}">
+                                    <div class="container">
+                                        <h6>{{ hamMails[i][1] }}</h6>
+                                        <p>{{ hamMails[i][2] }}</p>
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="flush-collapse{{i}}" class="accordion-collapse collapse"
+                                aria-labelledby="flush-heading{{i}}" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <div class="container">
+                                        <!-- <h6 class="card-title mb-2"></h6><br> -->
+                                        <small style="float: right;">{{ hamMails[i][0] }}</small><br><br>
+                                        <p class="card-text">{{ hamMails[i][3] }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {%endfor%}
+                    </div>
+                </div>
+                <div class="tab-pane fade show" id="v-pills-spam" role="tabpanel" aria-labelledby="v-pills-spam-tab">
+                    <h4>Spam Mails</h4>
+                    <div class="accordion accordion-flush" id="accordionFlushExample1">
+                        {%for i in range(0, len_spam) %}
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-heading1{{i}}">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapse1{{i}}" aria-expanded="false"
+                                    aria-controls="flush-collapse1{{i}}">
+                                    <div class="container">
+                                        <h6>{{ spamMails[i][1] }}</h6>
+                                        <p>{{ spamMails[i][2] }}</p>
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="flush-collapse1{{i}}" class="accordion-collapse collapse"
+                                aria-labelledby="flush-heading1{{i}}" data-bs-parent="#accordionFlushExample1">
+                                <div class="accordion-body">
+                                    <div class="container">
+                                        <small style="float: right;">{{ spamMails[i][0] }}</small><br><br>
+                                        <p class="card-text">{{ spamMails[i][3] }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {%endfor%}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock inbox %}

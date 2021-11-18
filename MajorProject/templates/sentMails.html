@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block sentMails %}
+
+<!-- {%for i in range(0, len) %}
+
+<div class="container">
+    <div class="card home-card" style="margin-left: 6%; margin-right: 6%; margin-top: 2%; margin-bottom: 2%;">
+        <h6 class="card-header mb-2">{{ mails[i][0] }}</h6>
+        <div class="card-body">
+            <h6 class="card-title mb-2">Subject : {{ mails[i][1] }}</h6><br>
+            <p class="card-text">{{ mails[i][2] }}</p>
+        </div>
+    </div>
+</div>
+
+{%endfor%} -->
+<div class="sent-mails">
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        {%for i in range(0, len) %}
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-heading{{i}}">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapse{{i}}" aria-expanded="false"
+                    aria-controls="flush-collapse{{i}}">
+                    <div class="container">
+                        <h6>{{ mails[i][0] }}</h6>
+                        <p>{{ mails[i][1] }}</p>
+                    </div>
+                </button>
+            </h2>
+            <div id="flush-collapse{{i}}" class="accordion-collapse collapse"
+                aria-labelledby="flush-heading{{i}}" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <div class="container">
+                        <p class="card-text">{{ mails[i][2] }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+</div>
+
+{% endblock sentMails %}

@@ -1,0 +1,109 @@
+*{
+   font-weight: 300;
+}
+nav, nav a, nav a:hover, nav a:active{
+   background-color: #eee2dc;
+   color: black;
+}
+nav a:hover{
+   font-weight: 400;
+}
+nav p{
+   margin: 0;
+   pointer-events: none;
+}
+.nav-content{
+   width: 90%;
+   margin: auto;
+}
+
+.user-name{
+   margin: 1%;
+}
+h5,h6,h4{
+   font-weight: 200;
+}
+.logout-button{
+   background-color: white;
+   color: #ac3b61;
+   border: 0.5px solid #ac3b61;
+   padding: 0.5% 1%;
+}
+.logout-button:hover{
+   background-color: #ac3b61;
+   color: white;
+}
+.home-card{
+   background-color: #eee2dc;
+   border: 0;
+   border-radius: 0;
+   margin: 2%;
+   color: #123c69;
+}
+.card-header{
+   background-color: #edc7b7;
+   color: #ac3b61;
+}
+.form{
+   padding: 2%;
+}
+.form-button{
+   margin: 2%;
+   margin-bottom: 0;
+   padding:1% 2%;
+   background-color: #ac3b61;
+   border: 0;
+   color: white;   
+}
+.form-button:hover{
+   background-color: white;
+   color: #ac3b61;
+   border: 0.5px solid #ac3b61;
+}
+textarea{
+   resize: none;
+}
+.form-control{
+   border: 0;
+   border-radius: 0;
+   font-weight: 100;
+}
+.row{
+   margin-top: 2%;
+}
+.inbox-button{
+   padding: 2%;
+   margin: 2%;
+   background-color: white;
+   border: 1px solid #ac3b61;
+   color: #ac3b61;
+   border: 0;
+}
+.inbox-button:hover {
+   background-color: #ac3b61;
+   color: white;
+}
+.result_display{
+   font-weight: 200;
+   margin: 2% 2% 0 2%;
+   font-size: 1.25em;
+}
+.logout-card{
+   background-color: #eee2dc;
+   border: 0;
+   border-radius: 0;
+   margin: 10% 20%;
+   color: #123c69;
+}
+.check-form{
+   margin: 4%;
+}
+.sent-mails{
+   margin: 4%;
+}
+.link-dark:hover{
+   color: #ac3b61;
+}
+.showPassword{
+   text-align: left ;
+}

@@ -1,0 +1,7 @@
+<!DOCTYPE html>
+{% extends 'login.html' %}
+{% block login_alert %}
+<div class="alert alert-danger" role="alert">
+    {{warn}} <a href="/login" class="alert-link"> Try Again</a>
+  </div>
+{% endblock login_alert %}

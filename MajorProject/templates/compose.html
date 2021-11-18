@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block home %}
+<div class="container">
+    <div class="card home-card">
+        <div class="card-header"><h5>Compose Mail</h5></div>
+        <form method="POST" action="/send" class="form">
+            <label for="toEmail" class="form-label">To</label>
+            <input name="to" id="toEmail" class="form-control" type="text">
+            <label for="Subject" class="form-label">Subject</label>
+            <input name="sub" id="Subject" class="form-control" type="text">
+            <label for="mail" class="form-label">Message</label>
+            <textarea name="mail" id="mail" rows="10" class="form-control"></textarea>
+            <div class="text-center">
+                <button class="form-button" type="submit">Send</button>
+            </div>
+        </form>
+        {% block result %}
+        {% endblock result %}
+    </div>
+
+</div>
+{% endblock %}
