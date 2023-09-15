@@ -5,12 +5,14 @@ from email.message import EmailMessage
 import imaplib     
 import email 
 import datetime
+import nltk
                   
+nltk.download('punkt')                 
 
 server = smtplib.SMTP_SSL("smtp.gmail.com", 465)
 
-username=""
-pwd=""
+username="" #your gmail id
+pwd="" #get password from app passwords in gmail settings
 
 sc = SpamClassifier(trainData)
 
