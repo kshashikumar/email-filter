@@ -11,8 +11,8 @@ nltk.download('punkt')
 
 server = smtplib.SMTP_SSL("smtp.gmail.com", 465)
 
-username="" #your gmail id
-pwd="" #get password from app passwords in gmail settings
+username="shashipatel2712@gmail.com" #your gmail id
+pwd="xdmi dctf bvwa bnkg" #get password from app passwords in gmail settings
 
 sc = SpamClassifier(trainData)
 
